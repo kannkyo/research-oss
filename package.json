@@ -1,0 +1,27 @@
+{
+  "name": "research-oss",
+  "version": "1.0.0",
+  "description": "Script to research oss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kannkyo/research-oss.git"
+  },
+  "keywords": [
+    "oss"
+  ],
+  "author": "kannkyo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kannkyo/research-oss/issues"
+  },
+  "homepage": "https://github.com/kannkyo/research-oss#readme",
+  "dependencies": {
+    "chart.js": "^2.8.0",
+    "chartjs-plugin-colorschemes": "^0.3.0",
+    "chartjs-plugin-labels": "^1.1.0"
+  }
+}

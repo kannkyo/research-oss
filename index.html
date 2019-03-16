@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>グラフ</title>
+</head>
+
+<body>
+  <h1>Github License Share in All Language</h1>
+  <canvas id="myChart"></canvas>
+  <script src="node_modules/chart.js/dist/Chart.bundle.js"></script>
+  <script src="node_modules/chartjs-plugin-colorschemes/dist/chartjs-plugin-colorschemes.min.js"></script>
+  <script src="node_modules/chartjs-plugin-labels/build/chartjs-plugin-labels.min.js"></script>
+  <script>
+    var ctx = document.getElementById("myChart").getContext('2d');
+
+    var data = {
+      labels: [
+        'afl-3.0',
+        'apache-2.0',
+        'artistic-2.0',
+        'bsl-1.0',
+        'bsd-2-clause',
+        'bsd-3-clause',
+        'bsd-3-clause-clear',
+        'cc',
+        'wtfpl',
+        'ecl-2.0',
+        'epl-1.0',
+        'eupl-1.1',
+        'agpl-3.0',
+        'gpl',
+        'lgpl',
+        'isc',
+        'lppl-1.3c',
+        'ms-pl',
+        'mit',
+        'mpl-2.0',
+        'osl-3.0',
+        'postgresql',
+        'ofl-1.1',
+        'ncsa',
+        'unlicense',
+        'zlib'
+      ],
+      datasets: [1].map(function(i) {
+        return {
+          label: 'Dataset ' + i,
+          data: [
+            524,
+            1054686,
+            9821,
+            2936,
+            49442,
+            138909,
+            350,
+            51178,
+            13963,
+            376,
+            37935,
+            677,
+            72216,
+            1311057,
+            95372,
+            28624,
+            390,
+            1467,
+            3799119,
+            37123,
+            2409,
+            60,
+            2774,
+            9,
+            107055,
+            3162
+          ],
+          fill: false
+        };
+      })
+    };
+
+    var options = {
+      legend: {
+        position: 'right'
+      },
+      plugins: {
+        colorschemes: {
+          scheme: 'brewer.Paired12'
+        },
+        labels: {
+          position: 'outside',
+          render: function (args) {return args.label + ':' + args.percentage + '%';},
+        }
+      }
+    };
+
+    var chart = new Chart(ctx, {
+      type: 'pie',
+      data: data,
+      options: options
+    });
+  </script>
+</body>
+
+</html>
