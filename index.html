@@ -82,6 +82,9 @@
 
     var options = {
       legend: {
+        labels: {
+          fontSize: 20
+        },
         position: 'right'
       },
       plugins: {
@@ -89,6 +92,7 @@
           scheme: 'brewer.Paired12'
         },
         labels: {
+          fontSize: 24,
           position: 'outside',
           render: function (args) {return args.label + ':' + args.percentage + '%';},
         }
